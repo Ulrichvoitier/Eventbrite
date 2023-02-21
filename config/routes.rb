@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'static_pages/index'
+  get 'static_pages/secret'
   devise_for :users
   get 'events/index'
   get 'events/show'
@@ -14,4 +16,5 @@ Rails.application.routes.draw do
   root 'events#index'
 
   resources :events
+  resources :static_pages
 end
