@@ -1,0 +1,21 @@
+<h1>Tous les évènements</h1>
+
+<div class="container">
+
+    <div class="row">
+    <h1>Bienvenue !</h1>
+    <p>Tu trouvera ici tous les évènements</p>
+    <!-- Afficher la liste des events -->
+        <% @all_events.each do |event| %>
+        <div class="card" style="width: 18rem;">
+    
+            <div class="card-body">
+                <h5 class="card-title">Event :  <%= event.title %></h5>
+                <p class="card-text"> <%= event.description %></p>
+                <a href="/gossips/<%= event.id %>" class="btn btn-primary">Voir l'event<%= event.id %></a>
+            </div>
+            
+        </div>
+        <% end %>
+    <a href= "/events/new" class="btn btn-primary">Créer un event</a>
+    </div>
